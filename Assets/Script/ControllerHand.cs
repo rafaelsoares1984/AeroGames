@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControllerHand : MonoBehaviour
 {
-    private SpriteRenderer image = null;
+    private SpriteRenderer image;
 
     private void Awake()
     {

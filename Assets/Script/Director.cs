@@ -17,13 +17,13 @@ public class Director : MonoBehaviour
         this.interfaceGameOver = GameObject.FindObjectOfType<InterfaceGameOver>();
     }
 
-    public void stopGame()
+    public virtual void stopGame()
     {
         Time.timeScale = 0;
         this.pointer.SavePointer();
         this.interfaceGameOver.ShowInterface();
     }
-    public void RestartGame()
+    public virtual void RestartGame()
     {
         this.interfaceGameOver.HideInterface();
         Time.timeScale = 1;

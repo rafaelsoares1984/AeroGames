@@ -15,6 +15,7 @@ public class DirectorMultiplayer : Director
     protected override void Start()
     {
         this.players = GameObject.FindObjectsOfType<Player>();
+        base.Start();
         this.interfaceInativeCanvas = GameObject.FindObjectOfType<InterfaceInativeCanvas>();
     }
 
@@ -49,7 +50,11 @@ public class DirectorMultiplayer : Director
         }
     }
 
-
+    public override void RestartGame(){
+        base.RestartGame();
+        this.RevivePlayer();
+    
+    }
 
 
 }
